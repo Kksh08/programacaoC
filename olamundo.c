@@ -1,30 +1,59 @@
 #include <stdio.h>
- 
-int main() {
-    int a = 10;
-    int b = 5;
- 
-    // Operadores aritméticos
-    int soma = a + b;
-    int subtracao = a - b;
-    int multiplicacao = a * b;
-    int divisao = a / b;
- 
-    // Operadores de atribuição
-    a += 2; // a será 12
-    b *= 3; // b será 15
- 
-    // Operadores de incremento e decremento
-    a++; // a será 13
-    b--; // b será 14
- 
-    // Exibição dos resultados
-    printf("Soma: %d\n", soma);
-    printf("Subtração: %d\n", subtracao);
-    printf("Multiplicação: %d\n", multiplicacao);
-    printf("Divisão: %d\n", divisao);
-    printf("Novo valor de a (após += 2 e ++): %d\n", a);
-    printf("Novo valor de b (após *= 3 e --): %d\n", b);
- 
-    return 0;
+#include <stdlib.h>
+#include <time.h>
+
+int main(){
+    int escolha_jogador, escolha_CPU;
+    srand(time(0));
+
+    printf("Jogo de jokenpo\n");
+    printf("Escolha uma opcao:\n ");
+    printf("1. Pedra\n");
+    printf(" 2. papel\n");
+    printf(" 3. Tesousa\n");
+    printf("Ecolha: ");
+    scanf("%d", &escolha_jogador);
+
+    escolha_CPU = rand() % 3 + 1;
+
+    switch(escolha_jogador)
+    {
+    case 1:
+        printf("jogador pedra - ");
+        break;
+    case 2:
+        printf("jogador papel - "); 
+        break;
+    case 3:
+        printf("jogador tesoura - "); 
+        break;
+    default:
+        printf("jogador invalido - ");
+        break;  
+    }
+    
+    switch(escolha_CPU)
+    {
+    case 1:
+        printf("cpu pedra\n ");  
+        break;
+    case 2:
+        printf("cpu papel\n ");
+        break;
+    case 3:
+        printf("cpu tesoura\n "); 
+        break;                   
+
+
+    }
+
+
+
+
+
+
+
+
+
+    
 }
