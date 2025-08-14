@@ -1,20 +1,15 @@
 #include <stdio.h>
-#include <time.h>
+
 
 int main() {
-    unsigned int i = 0;
 
-    do {
-        printf("digite um numero: ");
-        scanf("%u", &i);
+    for(int i = 1; i <= 10; i++){
+        for(int j = 1; j <= 10; j++){
 
-        if (i % 2 == 0) {
-            printf("%u par\n", i);
-        } else {
-            printf("%u impar\n", i);
-            
+            printf("%d x %d = %d\n", i, j, i * j);
         }
-    } while (i % 2 != 0);
-    printf("O numero %u e impar, por favor digite outro numero par para sair.\n", i);
+        printf("\n");
+    }
+   
     return 0;
 }
