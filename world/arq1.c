@@ -1,14 +1,21 @@
 #include <stdio.h>
 
-int main(){
-    for (int i = 0, j = 10; i < j; i++, j--)
-    {
-        printf(" I: %d, J: %d ", i, j);       
+
+void sasuke(int naruto) {
+    if(naruto > 5){
+        printf("%d\n", naruto);
+        sasuke(naruto - 1);
     }
-    
-    
-    
-    
+}
+
+
+
+int main(){
+
+    int madara = 10;
+
+    printf("Guerra ninja\n");
+    sasuke(madara);
     
     
     
